@@ -25,9 +25,15 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^18.0.0",
+    "@angular-devkit/core": "^18.0.0",
+    "@angular-devkit/schematics": "^18.0.0",
     "@angular/cli": "^18.0.0",
     "@angular/compiler-cli": "^18.0.0",
+    "@nx/angular": "22.4.5",
+    "@nx/workspace": "22.4.5",
+    "@schematics/angular": "^18.0.0",
     "@types/node": "^20.0.0",
+    "nx": "22.4.5",
     "typescript": "~5.4.0"
   }
 }
