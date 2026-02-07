@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary: #1a1a1a;
+  --secondary: #f5f5f5;
+  --accent: #d4af37;
+  --accent-dark: #b8941f;
+  --text-primary: #1a1a1a;
+  --text-secondary: #666666;
+  --bg-primary: #ffffff;
+  --bg-secondary: #fafafa;
+  --shadow: rgba(0, 0, 0, 0.08);
+  --shadow-strong: rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] {
+  --primary: #f5f5f5;
+  --secondary: #2a2a2a;
+  --accent: #ffd700;
+  --accent-dark: #d4af37;
+  --text-primary: #f5f5f5;
+  --text-secondary: #a0a0a0;
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #242424;
+  --shadow: rgba(255, 255, 255, 0.05);
+  --shadow-strong: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background 0.5s ease, color 0.5s ease;
+  overflow-x: hidden;
+}

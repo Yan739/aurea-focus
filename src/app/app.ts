@@ -4,7 +4,7 @@ import { Subscription } from 'rxjs';
 import { TimerComponent } from './components/timer/timer.component';
 import { StatsComponent } from './components/stats/stats.component';
 import { NotesComponent } from './components/notes/notes.component';
-import { SettingsComponent } from './components/settings/settings.component';
+import { SettingsComponent } from './components/settings/Settings.component';
 import { ThemeService, Theme } from './services/theme.service';
 import { NotificationService, NotificationMessage } from './services/notification.service';
 
@@ -18,8 +18,8 @@ import { NotificationService, NotificationMessage } from './services/notificatio
     NotesComponent,
     SettingsComponent
   ],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  templateUrl: './app.html',
+  styleUrls: ['./app.scss']
 })
 export class AppComponent implements OnInit, OnDestroy {
   showSettings = false;
