@@ -1,0 +1,34 @@
+<aside class="notes-panel">
+  <div class="notes-header">
+    <h2 class="notes-title">Notes</h2>
+    <button class="add-note-btn" (click)="toggleNoteInput()">
+      + Nouvelle
+    </button>
+  </div>
+
+  <div class="note-input-container" [class.active]="showInput">
+    <textarea 
+      class="note-input" 
+      [(ngModel)]="noteContent"
+      placeholder="Notez vos pensées, idées, tâches...">
+    </textarea>
+    <div class="note-actions">
+      <button class="note-btn save" (click)="saveNote()">Enregistrer</button>
+      <button class="note-btn cancel" (click)="cancelNote()">Annuler</button>
+    </div>
+  </div>
+
+  <div class="notes-list">
+    <div *ngIf="notes.length === 0" class="no-notes">
+      Aucune note pour le moment
+    </div>
+    
+    <div *ngFor="let note of notes" class="note-item">
+      <div class="note-header">
+        <span class="note-time">{{ note.timestamp }}</span>
+        <button class="note-delete" (click)="deleteNote(note.id)">×</button>
+      </div>
+      <div class="note-content">{{ note.content }}</div>
+    </div>
+  </div>
+</aside>

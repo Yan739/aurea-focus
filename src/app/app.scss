@@ -1,0 +1,136 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--shadow);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg-primary);
+  animation: slideDown 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-icon {
+  color: var(--accent);
+  animation: rotate 60s linear infinite;
+  filter: drop-shadow(0 2px 8px rgba(212, 175, 55, 0.3));
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.header-actions {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.theme-toggle,
+.settings-btn {
+  background: none;
+  border: 1px solid var(--shadow-strong);
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+
+  &:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow-strong);
+  }
+}
+
+.main-content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 2rem;
+  padding: 3rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.notification {
+  position: fixed;
+  top: 100px;
+  right: 3rem;
+  background: var(--accent);
+  color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.4);
+  transform: translateX(400px);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 2000;
+  font-weight: 500;
+
+  &.show {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 1200px) {
+  .main-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1.5rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .main-content {
+    padding: 2rem 1.5rem;
+  }
+}

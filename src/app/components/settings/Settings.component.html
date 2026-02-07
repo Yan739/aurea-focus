@@ -1,0 +1,67 @@
+<div class="modal-overlay" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <h2 class="modal-header">Paramètres</h2>
+    
+    <div class="settings-group">
+      <label class="settings-label">Durée Travail (minutes)</label>
+      <input 
+        type="number" 
+        class="settings-input" 
+        [(ngModel)]="settings.workDuration"
+        min="1" 
+        max="60">
+    </div>
+
+    <div class="settings-group">
+      <label class="settings-label">Pause Courte (minutes)</label>
+      <input 
+        type="number" 
+        class="settings-input" 
+        [(ngModel)]="settings.shortBreakDuration"
+        min="1" 
+        max="30">
+    </div>
+
+    <div class="settings-group">
+      <label class="settings-label">Pause Longue (minutes)</label>
+      <input 
+        type="number" 
+        class="settings-input" 
+        [(ngModel)]="settings.longBreakDuration"
+        min="1" 
+        max="60">
+    </div>
+
+    <div class="settings-group checkbox-group">
+      <label class="checkbox-label">
+        <input 
+          type="checkbox" 
+          [(ngModel)]="settings.soundEnabled">
+        <span>Activer les notifications sonores</span>
+      </label>
+    </div>
+
+    <div class="settings-group checkbox-group">
+      <label class="checkbox-label">
+        <input 
+          type="checkbox" 
+          [(ngModel)]="settings.autoStartBreaks">
+        <span>Démarrer automatiquement les pauses</span>
+      </label>
+    </div>
+
+    <div class="settings-group checkbox-group">
+      <label class="checkbox-label">
+        <input 
+          type="checkbox" 
+          [(ngModel)]="settings.deepFocusMode">
+        <span>Mode Deep Focus (blocage distractions internes)</span>
+      </label>
+    </div>
+
+    <div class="modal-actions">
+      <button class="modal-btn primary" (click)="saveSettings()">Enregistrer</button>
+      <button class="modal-btn secondary" (click)="closeModal()">Annuler</button>
+    </div>
+  </div>
+</div>

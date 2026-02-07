@@ -1,0 +1,47 @@
+<section class="timer-panel">
+  <div class="mode-selector">
+    <button 
+      class="mode-btn" 
+      [class.active]="timerState.mode === TimerMode.WORK"
+      (click)="changeMode(TimerMode.WORK)"
+      [disabled]="timerState.isRunning">
+      Travail
+    </button>
+    <button 
+      class="mode-btn" 
+      [class.active]="timerState.mode === TimerMode.SHORT_BREAK"
+      (click)="changeMode(TimerMode.SHORT_BREAK)"
+      [disabled]="timerState.isRunning">
+      Pause Courte
+    </button>
+    <button 
+      class="mode-btn" 
+      [class.active]="timerState.mode === TimerMode.LONG_BREAK"
+      (click)="changeMode(TimerMode.LONG_BREAK)"
+      [disabled]="timerState.isRunning">
+      Pause Longue
+    </button>
+  </div>
+
+  <div class="timer-circle">
+    <div class="circle-bg"></div>
+    <div class="circle-progress" [style.--progress.%]="progress"></div>
+    <div class="timer-display">
+      <div class="timer-time">{{ formatTime(timerState.timeLeft) }}</div>
+      <div class="timer-label">{{ getModeLabel() }}</div>
+    </div>
+  </div>
+
+  <div class="timer-controls">
+    <button class="control-btn" (click)="toggleTimer()">
+      {{ timerState.isRunning ? 'Pause' : (timerState.timeLeft === timerState.totalTime ? 'Démarrer' : 'Reprendre') }}
+    </button>
+    <button class="control-btn secondary" (click)="resetTimer()">
+      Réinitialiser
+    </button>
+  </div>
+
+  <div class="session-info">
+    {{ getSessionInfo() }}
+  </div>
+</section>
