@@ -338,14 +338,5 @@ Created as a **personal learning project** to:
 
 ---
 
-## Acknowledgments
-
-- Design inspired by luxury watchmaking aesthetics
-- Pomodoro Technique® by Francesco Cirillo
-- Google Fonts: Cormorant Garamond & Montserrat
-- Angular team for the fantastic framework
-
----
-
 *Personal project — public — no restrictive license.*
 
