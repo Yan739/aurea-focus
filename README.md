@@ -295,37 +295,6 @@ This project demonstrates:
 
 ---
 
-## Future Enhancements
-
-Potential improvements for learning:
-
-- [ ] Unit tests (Jasmine/Karma)
-- [ ] E2E tests (Cypress/Playwright)
-- [ ] Service Worker for offline capability
-- [ ] Web Push Notifications API
-- [ ] i18n internationalization
-- [ ] Data export/import (JSON)
-- [ ] Cloud sync (Firebase/Supabase)
-- [ ] WCAG 2.1 AA accessibility compliance
-- [ ] Analytics integration
-- [ ] Dark mode system preference detection
-
----
-
-## Screenshots
-
-### Light Theme
-- Clean, elegant interface with golden accents
-- Animated progress ring
-- Real-time statistics
-
-### Dark Theme
-- Automatically activates 6 PM - 6 AM
-- Warm gold highlights on dark background
-- Reduced eye strain for night sessions
-
----
-
 ## Motivation
 
 Created as a **personal learning project** to:
